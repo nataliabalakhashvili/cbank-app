@@ -1,1 +1,116 @@
-<p>auth works!</p>
+<header class="d-flex justify-content-between header">
+  <div class="header__logo">
+    <img src="./assets/icons/slo-logo.PNG" alt="logo" class="header__logo-img">
+  </div>
+  <div class="header__sign-in">
+    already using?
+    <button class="header__sign-in-btn">
+      Sign in
+    </button>
+  </div>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <div class="left-content">
+        <h1 class="left-content__header">
+          Create an account
+        </h1>
+        <div class="left-content__list list">
+          <div class="list__item d-flex justify-content-start">
+            <div class="list__item-icon">
+              <img src="./assets/icons/secure.PNG" alt="icon">
+            </div>
+            <span>
+              Secure payments through reliable partners
+            </span>
+          </div>
+          <div class="list__item d-flex justify-content-start">
+            <div class="list__item-icon">
+              <img src="./assets/icons/lightning.PNG" alt="icon">
+            </div>
+            <span>
+              Fast transfers
+            </span>
+          </div>
+          <div class="list__item d-flex justify-content-start">
+            <div class="list__item-icon">
+              <img src="./assets/icons/percent.PNG" alt="icon">
+            </div>
+            <span>
+              Fair commissions
+            </span>
+          </div>
+          <div class="list__item d-flex justify-content-start">
+            <div class="list__item-icon">
+              <img src="./assets/icons/beat.PNG" alt="icon">
+            </div>
+            <span>
+              Best available rates
+            </span>
+          </div>
+          <div class="list__item d-flex justify-content-start">
+            <div class="list__item-icon">
+              <img src="./assets/icons/thumb.PNG" alt="icon">
+            </div>
+            <span>
+              Convenience
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="right-content">
+        <form class="form">
+          <div class="form__field">
+            <mat-form-field appearance="outline" formControlName="fullName">
+              <mat-icon matSuffix class="text-green">done</mat-icon>
+              <mat-label>Full Name</mat-label>
+              <input matInput placeholder="Placeholder" type="text">
+            </mat-form-field>
+          </div>
+          <div class="form__field">
+            <mat-form-field appearance="outline" formControlName="Email">
+              <mat-icon matSuffix class="text-green">done</mat-icon>
+              <mat-label>Email</mat-label>
+              <input matInput placeholder="Placeholder"type="email">
+            </mat-form-field>
+          </div>
+          <div class="form__field">
+            <mat-form-field appearance="outline" formControlName="text">
+              <mat-icon matSuffix class="text-green">done</mat-icon>
+              <mat-label>Phone Number</mat-label>
+              <input matInput placeholder="Placeholder" type="number">
+            </mat-form-field>
+          </div>
+          <div class="form__field">
+            <mat-form-field appearance="outline" formControlName="password">
+              <mat-icon matSuffix class="text-gray">remove_red_eye</mat-icon>
+              <mat-label>Password</mat-label>
+              <input matInput placeholder="Placeholder" type="password">
+            </mat-form-field>
+          </div>
+          <div class="form__field">
+            <mat-form-field appearance="outline">
+              <mat-label>Choose a date</mat-label>
+              <input matInput [matDatepicker]="picker">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker class="datepicker__picker" #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="form__field">
+            <button type="submit">
+              Sign up
+            </button>
+          </div>
+          <div class="form__field-checkbox">
+            <mat-checkbox formControl="termsCheckbox">
+              I agree to our Terms of Service and Privacy Policy
+            </mat-checkbox>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

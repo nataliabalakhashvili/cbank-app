@@ -1,0 +1,133 @@
+$app-lightgray: #e6e7eb;
+$app-gray: #9D9FA3;
+$app-dark-gray: #66676B;
+$app-purple: #3f40ef;
+$app-green: #3FAB52;
+
+::ng-deep .mat-form-field-outline-start {
+  border-radius: 8px 0 0 8px !important;
+  min-width: 8px !important;
+}
+
+::ng-deep .mat-form-field-outline-end {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+mat-form-field {
+  width: 100%;
+  font-size: 18px
+}
+
+::ng-deep .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: $app-purple;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-ripple .mat-ripple-element {
+  opacity: 0.03 !important;
+  background-color: $app-purple!important;
+}
+
+::ng-deep .mat-checkbox-checked.mat-accent .mat-checkbox-background,.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: $app-purple;
+}
+
+mat-checkbox ::ng-deep .mat-checkbox-inner-container {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+::ng-deep{
+  & .mat-checkbox-background, .mat-checkbox-frame {
+    border-radius: 6px !important;
+  }
+}
+
+mat-checkbox{
+  color: $app-dark-gray;
+}
+::ng-deep .mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button {
+  width: 20px!important;
+  height: 20px!important;
+}
+
+.header{
+  padding: 50px;
+  border-bottom: 1px solid $app-lightgray;
+
+  &__logo-img{
+    width: 50px;
+  }
+
+  &__sign-in-btn{
+    border: 0;
+    background-color: transparent;
+    padding-left: 0;
+    padding-right: 0;
+    color: $app-purple;
+    font-weight: bold;
+  }
+}
+
+.left-content{
+  padding-top: 100px;
+
+  &__header{
+    font-size: 50px;
+    font-weight: bold;
+    width: 300px;
+    line-height: 1.2;
+  }
+
+}
+
+.list{
+  &__item{
+    padding-top: 25px;
+
+    span{
+      width: 250px;
+      font-size: 18px;
+      padding-left: 16px;
+    }
+  }
+
+  &__item-icon{
+    img{
+      width: 20px;
+    }
+  }
+}
+
+.right-content{
+  margin-top: 106px;
+}
+
+.form{
+  &__field{
+    width: 100%;
+    display: block;
+
+    button{
+      width: 100%;
+      height: 70px;
+      background-color: $app-purple;
+      border: 0;
+      border-radius: 8px;
+      color: white;
+      font-size: 18px;
+    }
+  }
+
+  &__field-checkbox{
+    margin-top: 20px;
+  }
+}
+
+.text-gray{
+  color: $app-gray;
+}
+
+.text-green{
+  color: $app-green;
+}
