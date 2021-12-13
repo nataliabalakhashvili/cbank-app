@@ -51,6 +51,9 @@ mat-checkbox{
   width: 20px!important;
   height: 20px!important;
 }
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper{
+  margin: 0!important;
+}
 
 .header{
   padding: 50px;

@@ -7,7 +7,10 @@ import { MatInputModule } from "@angular/material/input";
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatIconModule } from "@angular/material/icon";
 import { MatDatepickerModule } from "@angular/material/datepicker";
-import {MatNativeDateModule} from "@angular/material/core";
+import { MatNativeDateModule } from "@angular/material/core";
+import { SignUpFormComponent } from "./sign-up-form/sign-up-form.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { NotificationsService } from "../../core/services/notifications/notifications.service";
 
 const routes: Routes = [
   {
@@ -17,7 +20,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [
+    AuthComponent,
+    SignUpFormComponent
+  ],
   imports: [
     RouterModule.forChild(routes),
     CommonModule,
@@ -26,8 +32,9 @@ const routes: Routes = [
     MatCheckboxModule,
     MatIconModule,
     MatDatepickerModule,
-    MatFormFieldModule,
     MatNativeDateModule,
+    ReactiveFormsModule
   ],
+  providers: [ NotificationsService ]
 })
 export class AuthModule {}

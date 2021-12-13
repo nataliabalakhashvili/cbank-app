@@ -62,54 +62,7 @@
     </div>
     <div class="col-6">
       <div class="right-content">
-        <form class="form">
-          <div class="form__field">
-            <mat-form-field appearance="outline" formControlName="fullName">
-              <mat-icon matSuffix class="text-green">done</mat-icon>
-              <mat-label>Full Name</mat-label>
-              <input matInput placeholder="Placeholder" type="text">
-            </mat-form-field>
-          </div>
-          <div class="form__field">
-            <mat-form-field appearance="outline" formControlName="Email">
-              <mat-icon matSuffix class="text-green">done</mat-icon>
-              <mat-label>Email</mat-label>
-              <input matInput placeholder="Placeholder"type="email">
-            </mat-form-field>
-          </div>
-          <div class="form__field">
-            <mat-form-field appearance="outline" formControlName="text">
-              <mat-icon matSuffix class="text-green">done</mat-icon>
-              <mat-label>Phone Number</mat-label>
-              <input matInput placeholder="Placeholder" type="number">
-            </mat-form-field>
-          </div>
-          <div class="form__field">
-            <mat-form-field appearance="outline" formControlName="password">
-              <mat-icon matSuffix class="text-gray">remove_red_eye</mat-icon>
-              <mat-label>Password</mat-label>
-              <input matInput placeholder="Placeholder" type="password">
-            </mat-form-field>
-          </div>
-          <div class="form__field">
-            <mat-form-field appearance="outline">
-              <mat-label>Choose a date</mat-label>
-              <input matInput [matDatepicker]="picker">
-              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-              <mat-datepicker class="datepicker__picker" #picker></mat-datepicker>
-            </mat-form-field>
-          </div>
-          <div class="form__field">
-            <button type="submit">
-              Sign up
-            </button>
-          </div>
-          <div class="form__field-checkbox">
-            <mat-checkbox formControl="termsCheckbox">
-              I agree to our Terms of Service and Privacy Policy
-            </mat-checkbox>
-          </div>
-        </form>
+        <app-sign-up-form></app-sign-up-form>
       </div>
     </div>
   </div>
