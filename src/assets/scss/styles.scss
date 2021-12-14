@@ -1,8 +1,23 @@
-@import "~@angular/material/theming";
-@include mat-core();
-
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "angular-notifier-override";
 @import "angular-notifier-imports";
-
-@import "_reset";
+@import "_variables";
 @import "_fonts";
+@import "_reset";
+
+.container{
+  max-width: 1100px;
+  width: 100%;
+}
+
+.text-red{
+  color: $app-red;
+}
+
+.text-gray{
+  color: $app-gray;
+}
+
+.text-green{
+  color: $app-green;
+}

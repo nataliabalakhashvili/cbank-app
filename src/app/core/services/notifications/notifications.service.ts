@@ -12,7 +12,6 @@ export class NotificationsService {
   }
 
   sayError(error: string): void {
-    console.log("sayerrr");
     this.notifier.notify("error", error);
   }
 }

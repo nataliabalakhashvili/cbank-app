@@ -1,23 +1,23 @@
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="form__field">
     <mat-form-field appearance="outline">
-      <mat-icon matSuffix class="text-green">done</mat-icon>
+      <mat-icon *ngIf="!form.controls['fullName'].errors" matSuffix class="text-green">done</mat-icon>
       <mat-label>Full Name</mat-label>
-      <input matInput placeholder="Placeholder" type="text" formControlName="fullName">
+      <input matInput placeholder="Ex: John Doe" type="text" formControlName="fullName">
     </mat-form-field>
   </div>
   <div class="form__field">
     <mat-form-field appearance="outline">
-      <mat-icon matSuffix class="text-green">done</mat-icon>
+      <mat-icon *ngIf="!form.controls['email'].errors" matSuffix class="text-green">done</mat-icon>
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Placeholder"type="email" formControlName="email">
+      <input matInput placeholder="Ex: johndoe@mail.com" type="email" formControlName="email">
     </mat-form-field>
   </div>
   <div class="form__field">
     <mat-form-field appearance="outline">
-      <mat-icon matSuffix class="text-green">done</mat-icon>
+      <mat-icon *ngIf="!form.controls['phoneNumber'].errors"  matSuffix class="text-green">done</mat-icon>
       <mat-label>Phone Number</mat-label>
-      <input matInput placeholder="Placeholder" type="text" formControlName="phoneNumber">
+      <input matInput placeholder="Ex: 555 12 34 56" type="text" formControlName="phoneNumber">
     </mat-form-field>
   </div>
   <div class="form__field">
@@ -28,8 +28,19 @@
         </mat-icon>
       </span>
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Placeholder" [type]="hide ? 'password' : 'text'" formControlName="password">
+      <input matInput placeholder="Placeholder" [type]="hide ? 'password' : 'text'" formControlName="password" (keyup)="checkPasswordStrength()" >
     </mat-form-field>
+    <div class="password-strength-checker" *ngIf="form.controls['password'].value">
+      <div class="password-strength-checker__title">
+        Password
+      </div>
+      <div class="password-strength-checker__progress-bar">
+        <span [style.width]="passwordStrengthLength +'%'"></span>
+      </div>
+      <div class="password-strength-checker__desc">
+        {{ passwordDesc }}
+      </div>
+    </div>
   </div>
   <div class="form__field">
     <mat-form-field appearance="outline">
@@ -45,8 +56,10 @@
     </button>
   </div>
   <div class="form__field-checkbox">
-    <mat-checkbox formControlName="termsCheckbox">
-      I agree to our Terms of Service and Privacy Policy
+    <mat-checkbox formControlName="termsCheckbox" (change)="isChecked = !isChecked">
+      <span [class.text-red]="!isChecked && isSubmitted">
+        I agree to our Terms of Service and Privacy Policy
+      </span>
     </mat-checkbox>
   </div>
 </form>

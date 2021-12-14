@@ -18,7 +18,19 @@ export class CustomValidators {
       const regex = new RegExp("^5[0-9].*$");
 
       if (!regex.test(control.value)) {
-        return { Mobile: true };
+        return { PhoneNumber: true };
+      }
+    }
+
+    return null;
+  }
+
+  static Email(control: AbstractControl): ValidationErrors | null {
+    if (control.value) {
+      const regex = new RegExp(/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/);
+
+      if (!regex.test(control.value)) {
+        return { email: true };
       }
     }
 
